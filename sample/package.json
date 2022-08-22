@@ -1,0 +1,16 @@
+{
+  "name": "sample",
+  "scripts": {
+    "print:one": "echo one",
+    "print:two": "echo two"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "asyncjs": "^0.0.13",
+    "hello-world-npm": "^1.1.1",
+    "jshint": "^2.13.5",
+    "lodash": "^4.17.21"
+  }
+}
