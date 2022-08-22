@@ -3,10 +3,8 @@ name: CI
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the "master" branch
-  push:
-    branches: ["master"]
-  pull_request:
-    branches: ["master"]
+  release:
+    types: [created]
 
   workflow_dispatch:
 
@@ -20,6 +18,12 @@ jobs:
       - name: Install needed software
         run: ./.github/scripts/Install.ps1
         shell: pwsh
-      - name: Build module
+      - name: Build Crescendo module
         run: ./build.ps1
         shell: pwsh
+      - name: Publish PowerShell Module
+        run: ./.github/scripts/Deploy.ps1
+        shell: pwsh
+        env:
+          POWERSHELLGALLERY_APIKEY: ${{ secrets.POWERSHELLGALLERY_APIKEY }}
+          GITHUB_PRERELEASE: ${{ github.event.release.prerelease }}
