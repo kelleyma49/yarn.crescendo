@@ -60,11 +60,11 @@ Export-CrescendoModule -ConfigurationFile (Get-ChildItem "$obj") -ModuleName (Jo
 Copy-Item (Join-path $PSScriptRoot "src/Helpers/*.ps1") (Join-Path $Output "Helpers") -Recurse
 
 $ManifestInfo = @{
-    ModuleVersion = "1.0"
+    ModuleVersion = "0.0"
     Author        = "Michael Kelley"
     Description   = 'PowerShell Crescendo cmdlet for yarn'
-    #LicenseUri    = 'https://github.com/adamdriscoll/sysinternals/blob/main/LICENSE'
-    #ProjectUri    = 'https://github.com/adamdriscoll/sysinternals'
+    LicenseUri    = 'https://github.com/kelleyma49/yarn.crescendo/blob/master/LICENSE'
+    ProjectUri    = 'https://github.com/kelleyma49/yarn.crescendo'
 }
 
 Update-ModuleManifest -Path (Join-Path $Output "Yarn.Crescendo.psd1") @ManifestInfo 
