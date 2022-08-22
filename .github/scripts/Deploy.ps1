@@ -2,7 +2,7 @@ $ErrorActionPreference = "Stop"
 Write-Host "Triggered from ${env:GITHUB_REF}"
     
 $psdir = $env:GITHUB_WORKSPACE
-$installdir = Join-Path $psdir 'yarn-crescendo'
+$installdir = Join-Path $psdir 'yarn.crescendo'
 
 # generate documentation:
 #$docdir = Join-Path $installdir 'en-US'

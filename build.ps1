@@ -1,4 +1,4 @@
-$Output = Join-Path $PSScriptRoot "yarn-crescendo"
+$Output = Join-Path $PSScriptRoot "yarn.crescendo"
 $obj = Join-Path $PSScriptRoot "obj"
 Remove-Item $Output -Recurse -Force -ErrorAction SilentlyContinue
 Remove-Item $obj -Recurse -Force -ErrorAction SilentlyContinue
