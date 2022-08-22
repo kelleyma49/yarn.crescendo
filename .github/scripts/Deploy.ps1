@@ -30,5 +30,5 @@ else {
     write-host ("publishing version {0}" -f $version)
 }
 
-#Publish-Module -NugetApiKey $env:POWERSHELLGALLERY_APIKEY -Path $installdir -Verbose
+Publish-Module -NugetApiKey $env:POWERSHELLGALLERY_APIKEY -Path $installdir -Verbose
 
