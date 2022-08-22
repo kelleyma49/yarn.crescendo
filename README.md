@@ -5,7 +5,7 @@
 [![PowerShell Gallery Downloads](https://img.shields.io/powershellgallery/dt/yarn.crescendo)](https://www.powershellgallery.com/packages/yarn.crescendo)
 [![CI](https://github.com/kelleyma49/yarn.crescendo/actions/workflows/CI.yml/badge.svg)](https://github.com/kelleyma49/yarn.crescendo/actions/workflows/CI.yml)
 [![Deploy](https://github.com/kelleyma49/yarn.crescendo/actions/workflows/Deploy.yml/badge.svg)](https://github.com/kelleyma49/yarn.crescendo/actions/workflows/Deploy.yml)
-[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/kelleyma49/PSFzf/blob/master/LICENSE)
+[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/kelleyma49/yarn.crescendo/blob/master/LICENSE)
 
 A PowerShell Crescendo module for [yarn](https://classic.yarnpkg.com/en/). Dynamic tab argument completion is supported for the commands `yarn run`, `yarn why`, and `yarn remove`.
 
