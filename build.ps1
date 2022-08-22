@@ -46,8 +46,8 @@ $Commands = Get-ChildItem (Join-Path "$PSScriptRoot" "src/Commands") | ForEach-O
 } | ConvertTo-Json -Depth 5 | Out-File "$obj\Commands.json"
 
 
-Export-CrescendoModule -ConfigurationFile (Get-ChildItem "$obj") -ModuleName (Join-Path $Output "yarn.crescendo") -Force
-Copy-Item (Join-path $PSScriptRoot "src/Helpers/*.ps1") (Join-Path $Output "Helpers") -Recurse
+Export-CrescendoModule -ConfigurationFile (Get-ChildItem "$obj") -ModuleName (Join-Path $Output "yarn.crescendo") -Force -Verbose
+Copy-Item (Join-path $PSScriptRoot "src/Helpers/*.ps1") (Join-Path $Output "Helpers") -Recurse -Verbose
 
 $ManifestInfo = @{
     ModuleVersion = "0.0"
@@ -57,6 +57,6 @@ $ManifestInfo = @{
     ProjectUri    = 'https://github.com/kelleyma49/yarn.crescendo'
 }
 
-Update-ModuleManifest -Path (Join-Path $Output "Yarn.Crescendo.psd1") @ManifestInfo 
+Update-ModuleManifest -Path (Join-Path $Output "yarn.crescendo.psd1") @ManifestInfo -Verbose
 
 # Invoke-Pester -Path "$PSScriptRoot\tests"
