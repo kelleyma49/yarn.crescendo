@@ -7,16 +7,6 @@ New-Item $Output -ItemType Directory
 New-Item (Join-Path $Output "Helpers") -ItemType Directory
 New-Item $obj -ItemType Directory
 
-$M = Import-Module Microsoft.PowerShell.Crescendo -RequiredVersion 1.0.0 -PassThru -ErrorAction SilentlyContinue
-if (-not $M) {
-    Install-Module Microsoft.PowerShell.Crescendo -RequiredVersion 1.0.0 -Force -Scope CurrentUser
-}
-
-$M = Import-Module Pester -PassThru -ErrorAction SilentlyContinue
-if (-not $M) {
-    Install-Module Pester -Force -Scope CurrentUser
-}
-
 $Commands = Get-ChildItem (Join-Path "$PSScriptRoot" "src/Commands") | ForEach-Object { 
     $Definition = & $_.FullName
     $Command = New-CrescendoCommand -Verb $Definition.Verb -Noun $Definition.Noun -OriginalName $Definition.OriginalName
