@@ -1,6 +1,6 @@
 # yarn.crescendo
 
-A PowerShell Crescendo module for [yarn](https://classic.yarnpkg.com/en/).
+A PowerShell Crescendo module for [yarn](https://classic.yarnpkg.com/en/). Dynamic tab argument completion is supported for `yarn run`, `yarn why`, and `yarn remove`.
 
 ## Supported Commands
 
