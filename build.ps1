@@ -57,6 +57,6 @@ $ManifestInfo = @{
     ProjectUri    = 'https://github.com/kelleyma49/yarn.crescendo'
 }
 
-Update-ModuleManifest -Path (Join-Path $Output "Yarn.Crescendo.psd1") @ManifestInfo 
+Update-ModuleManifest -Path (Join-Path $Output "yarn.crescendo.psd1") @ManifestInfo 
 
 # Invoke-Pester -Path "$PSScriptRoot\tests"
