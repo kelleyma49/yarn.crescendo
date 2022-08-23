@@ -58,5 +58,3 @@ $ManifestInfo = @{
 }
 
 Update-ModuleManifest -Path (Join-Path $Output "yarn.crescendo.psd1") @ManifestInfo -Verbose
-
-# Invoke-Pester -Path "$PSScriptRoot\tests"
