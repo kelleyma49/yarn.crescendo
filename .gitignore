@@ -1,4 +1,4 @@
 obj/*
 output/*
 yarn.crescendo/*
-sample/node_modules/*
+**/node_modules/*

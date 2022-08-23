@@ -21,6 +21,9 @@ jobs:
       - name: Build Crescendo module
         run: ./build.ps1
         shell: pwsh
+      - name: Run tests
+        run: ./.github/scripts/Tests.ps1
+        shell: pwsh
       - name: Publish PowerShell Module
         run: ./.github/scripts/Deploy.ps1
         shell: pwsh

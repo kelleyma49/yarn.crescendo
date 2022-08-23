@@ -23,3 +23,6 @@ jobs:
       - name: Build module
         run: ./build.ps1
         shell: pwsh
+      - name: Run tests
+        run: ./.github/scripts/Tests.ps1
+        shell: pwsh
